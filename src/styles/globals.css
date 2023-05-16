@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  background-image: url("/crowd.png");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-white-500 {
+  color: white !important;
+}
+.white-text {
+  color: white !important;
+}
+.custom-prose {
+  color: white;
+  /* Add any other styles as needed */
+}
