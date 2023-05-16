@@ -34,7 +34,7 @@ function FileQandAArea(props: FileQandAAreaProps) {
       return;
     }
     if (props.files.length === 0) {
-      setAnswerError("Please upload files before asking a question.");
+      setAnswerError("Hold your horses! This is a prototype, please wait 10 seconds before asking a question.");
       return;
     }
 
