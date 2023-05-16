@@ -108,7 +108,7 @@ function FileQandAArea(props: FileQandAAreaProps) {
   return (
     <div className="space-y-4 text-gray-800">
      <div className="mt-2 font-medium text-white-500 text-4xl">
-       Hey! What's your question?
+       Hey! What&apos;s your question?
          </div>
       <div className="space-y-2">
         <input
