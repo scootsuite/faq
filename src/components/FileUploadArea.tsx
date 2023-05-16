@@ -34,15 +34,12 @@ function FileUploadArea(props: FileUploadAreaProps) {
 fetch('lnfaq2.txt')
   .then(response => response.text())
   .then(faqData => {
-    console.log(faqData); // The text content of the response 
-    console.log(files)
+
  
   const fileData = new Blob([faqData], { type: 'text/plain' });
 const fileName = 'faqsource.txt';
-console.log(fileData);
 const file = new File([fileData], fileName, { type: 'text/plain' });
-console.log(file);
-console.log(file.name);
+
 
 const formData = new FormData();
 formData.append("file", file);
@@ -59,7 +56,6 @@ async function thisFunction(){
                     },
                   }
                 );
-                console.log(processFileResponse.status);
 
                 if (processFileResponse.status === 200) {
                   const text = processFileResponse.data.text;
@@ -76,14 +72,11 @@ async function thisFunction(){
                     chunks,
                     extractedText: text,
                   };
-                  console.log(fileObject);
 
                   const validFiles = [fileObject];
-                  console.log(validFiles)
         // Check if the file name already exists in the files state
         if (files.length == 0) {
         files.push(fileObject)};
-        console.log(files);
 
         // Set the files state with the valid files and the existing files
         setFiles((prevFiles) => [...validFiles]);
@@ -96,7 +89,6 @@ async function thisFunction(){
                   console.log("Error creating file embedding");
                   return null;
                 }
-                console.log(fileObject);
               
 // Filter out any null values from the uploadedFiles array
         
